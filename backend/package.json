@@ -15,14 +15,13 @@
     "cors": "latest",
     "dotenv": "latest",
     "express": "latest",
-    "nanoid": "latest",
-    "ws": "latest",
     "zod": "latest"
   },
   "devDependencies": {
+    "@types/better-sqlite3": "latest",
+    "@types/cors": "latest",
     "@types/express": "latest",
     "@types/node": "latest",
-    "@types/ws": "latest",
     "tsx": "latest",
     "typescript": "latest",
     "vitest": "latest"

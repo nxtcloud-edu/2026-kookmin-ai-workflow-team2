@@ -1,0 +1,129 @@
+[
+  {
+    "id": "anniversary_100_day",
+    "name": "100일 기념일",
+    "category": "FIXED_DAY",
+    "hidden": false,
+    "priority": 900,
+    "trigger": { "relationshipDayEquals": 100 },
+    "openingMessage": "오늘 무슨 날인지 몰라?",
+    "timingContext": "NEEDS_ATTENTION",
+    "steps": [{ "step": 1, "prompt": "기념일을 기억하고 애정 표현을 하는지 평가한다." }],
+    "effects": {
+      "success": { "affection": 10, "trust": 5, "stress": -5 },
+      "failure": { "affection": -20, "trust": -10, "stress": 15 }
+    },
+    "minDay": 100,
+    "maxDay": 100,
+    "cooldownDays": 365
+  },
+  {
+    "id": "boss_scolded",
+    "name": "상사에게 혼남",
+    "category": "STRESS",
+    "hidden": false,
+    "priority": 300,
+    "trigger": { "minDay": 3, "stressMin": 20, "baseChance": 0.12 },
+    "openingMessage": "오늘 회사에서 부장한테 완전 깨졌어. 진짜 기분 별로야.",
+    "timingContext": "NEEDS_SUPPORT",
+    "steps": [{ "step": 1, "prompt": "먼저 공감하고 편을 들어주는지 평가한다." }],
+    "effects": {
+      "success": { "affection": 5, "comfort": 8, "stress": -15 },
+      "failure": { "affection": -8, "comfort": -10, "stress": 10 }
+    },
+    "minDay": 3,
+    "maxDay": null,
+    "cooldownDays": 1
+  },
+  {
+    "id": "parents_fight",
+    "name": "부모님과 다툼",
+    "category": "FAMILY_STRESS",
+    "hidden": false,
+    "priority": 320,
+    "trigger": { "minDay": 10, "stressMin": 30, "baseChance": 0.08 },
+    "openingMessage": "오늘 부모님이랑 좀 크게 싸웠어. 말하기도 싫다.",
+    "timingContext": "NEEDS_SOFT_SUPPORT",
+    "steps": [{ "step": 1, "prompt": "캐묻지 않고 부드럽게 지지하는지 평가한다." }],
+    "effects": {
+      "success": { "trust": 10, "comfort": 10, "stress": -10 },
+      "failure": { "trust": -10, "affection": -5, "stress": 15 }
+    },
+    "minDay": 10,
+    "maxDay": null,
+    "cooldownDays": 1
+  },
+  {
+    "id": "boyfriend_cheating_suspicion",
+    "name": "바람 의심",
+    "category": "SUSPICION",
+    "hidden": false,
+    "priority": 500,
+    "trigger": { "suspicionMin": 60, "trustMax": 40 },
+    "openingMessage": "요즘 너 좀 이상해. 혹시 나한테 숨기는 거 있어?",
+    "timingContext": "NEEDS_REASSURANCE",
+    "steps": [{ "step": 1, "prompt": "방어적이지 않게 안심시키는지 평가한다." }],
+    "effects": {
+      "success": { "trust": 10, "suspicion": -20, "affection": 3 },
+      "failure": { "trust": -15, "suspicion": 20, "stress": 15 }
+    },
+    "minDay": null,
+    "maxDay": null,
+    "cooldownDays": 1
+  },
+  {
+    "id": "male_friends_trip",
+    "name": "남사친 포함 여행",
+    "category": "JEALOUSY_TRUST",
+    "hidden": false,
+    "priority": 350,
+    "trigger": { "minDay": 20, "trustMin": 30, "baseChance": 0.08 },
+    "openingMessage": "이번 주말에 친구들이랑 여행 가기로 했어. 근데 남자애들도 몇 명 있어.",
+    "timingContext": "BALANCED_TRUST",
+    "steps": [{ "step": 1, "prompt": "불편함은 말하되 통제하지 않고 신뢰를 표현하는지 평가한다." }],
+    "effects": {
+      "success": { "trust": 8, "affection": 5, "jealousy": -10 },
+      "failure": { "trust": -10, "affection": -10, "jealousy": 20, "stress": 10 }
+    },
+    "minDay": 20,
+    "maxDay": null,
+    "cooldownDays": 1
+  },
+  {
+    "id": "male_manager_flirting",
+    "name": "남자 대리 플러팅",
+    "category": "JEALOUSY_TRUST",
+    "hidden": false,
+    "priority": 360,
+    "trigger": { "minDay": 15, "baseChance": 0.08 },
+    "openingMessage": "오늘 회사 남자 대리가 좀 이상하게 말했어. 나한테 계속 예쁘다고 하고 퇴근하고 밥 먹자고 하더라.",
+    "timingContext": "BALANCED_REASSURANCE",
+    "steps": [{ "step": 1, "prompt": "질투보다 신뢰와 안심을 균형 있게 표현하는지 평가한다." }],
+    "effects": {
+      "success": { "trust": 10, "affection": 5, "comfort": 5 },
+      "failure": { "trust": -15, "stress": 15, "jealousy": 20 }
+    },
+    "minDay": 15,
+    "maxDay": null,
+    "cooldownDays": 1
+  },
+  {
+    "id": "girlfriend_emotional_drift_hidden",
+    "name": "감정적 거리감",
+    "category": "HIDDEN",
+    "hidden": true,
+    "priority": 700,
+    "trigger": { "affectionMax": 25, "trustMax": 30, "comfortMax": 30, "failedEventsMin": 3 },
+    "openingMessage": "요즘 내가 좀 달라진 거 느꼈어?",
+    "timingContext": "RELATIONSHIP_RECOVERY",
+    "steps": [{ "step": 1, "prompt": "관계 회복 의지를 보이고 책임 있게 사과하는지 평가한다." }],
+    "effects": {
+      "success": { "trust": 10, "affection": 10, "comfort": 5 },
+      "failure": { "affection": -30, "trust": -20 },
+      "failureCanBreakup": true
+    },
+    "minDay": null,
+    "maxDay": null,
+    "cooldownDays": 1
+  }
+]
