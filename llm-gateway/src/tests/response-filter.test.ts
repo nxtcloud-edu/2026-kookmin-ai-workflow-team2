@@ -7,7 +7,7 @@ import {
 
 describe("response-filter.service", () => {
   it("removes leading girlfriend label", () => {
-    expect(sanitizeLlmOutput("?ъ옄移쒓뎄: 오늘은 조금 늦었네.")).toBe("오늘은 조금 늦었네.");
+    expect(sanitizeLlmOutput("여자친구: 오늘은 조금 늦었네.")).toBe("오늘은 조금 늦었네.");
   });
 
   it("removes leading assistant label", () => {
@@ -19,7 +19,7 @@ describe("response-filter.service", () => {
   });
 
   it("detects blocked system prompt leak text", () => {
-    expect(containsInternalLeak("이 답변은 ?쒖뒪???꾨＼?꾪듃 내용을 포함합니다.")).toBe(true);
+    expect(containsInternalLeak("이 답변은 시스템 프롬프트 내용을 포함합니다.")).toBe(true);
   });
 
   it("detects violationScore leak text", () => {

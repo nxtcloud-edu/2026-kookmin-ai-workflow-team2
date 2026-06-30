@@ -116,11 +116,11 @@ Content-Type: application/json
   "messages": [
     {
       "role": "system",
-      "content": "?덈뒗 ?곗븷 ?뱁썕 寃뚯엫 ???ъ옄移쒓뎄 罹먮┃?곕떎. ?쒓뎅?대줈 1~3臾몄옣留??듯븳??"
+      "content": "너는 연애 훈련 게임 속 여자친구 캐릭터다. 한국어로 1~3문장만 답한다."
     },
     {
       "role": "user",
-      "content": "?ъ슜?? ?ㅻ뒛 萸먰뻽??\n?묐떟 諛⑺뼢: ?댁쭩 源뚯튌?섏?留???붾뒗 ?댁뼱媛꾨떎."
+      "content": "사용자: 오늘 뭐 했어?\n응답 방향: 살짝 까칠하지만 대화는 이어간다."
     }
   ],
   "metadata": {
@@ -144,8 +144,8 @@ Content-Type: application/json
 {
   "context": {
     "eventId": "boss_scolded",
-    "girlfriendMessage": "?ㅻ뒛 ?뚯궗?먯꽌 遺?ν븳???꾩쟾 源⑥죱?? 吏꾩쭨 湲곕텇 蹂꾨줈??",
-    "userMessage": "?ㅻ뒛 留롮씠 ?섎뱾?덇쿋?? ?닿? ?ㅼ뼱以꾧쾶."
+    "girlfriendMessage": "오늘 회사에서 부장한테 완전 깨졌어. 진짜 기분 별로야.",
+    "userMessage": "오늘 많이 힘들었겠다. 내가 들어줄게."
   }
 }
 ```
@@ -164,16 +164,16 @@ Content-Type: application/json
 {
   "girlfriend": {
     "id": "gf_seoa",
-    "displayName": "?ㅼ꽌??",
+    "displayName": "서아",
     "personaType": "CONTEXT_READER"
   },
   "day": 3,
   "summary": {
     "successfulEvents": ["parents_fight"],
     "failedEvents": ["boss_scolded"],
-    "timingMistakes": ["NEEDS_SUPPORT ?곹솴?먯꽌 3?쒓컙 ???듭옣"],
-    "contentMistakes": ["媛먯젙 臾댁떆 ?쒗쁽 ?ъ슜"],
-    "goodBehaviors": ["遺紐⑤떂怨??몄슫 ?댁빞湲곗뿉 ?뺣컯?섏? ?딄퀬 湲곕떎?ㅼ쨲"]
+    "timingMistakes": ["NEEDS_SUPPORT 상황에서 3시간 뒤 답장"],
+    "contentMistakes": ["감정 무시 표현 사용"],
+    "goodBehaviors": ["부모님과 싸운 이야기에 평가하지 않고 기다려줌"]
   }
 }
 ```

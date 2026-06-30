@@ -1,7 +1,7 @@
 import { env } from "../config/env.js";
 import { BLOCKED_OUTPUT_PATTERNS } from "../config/blocked-output-patterns.js";
 
-const leadingLabelPatterns = [/^\s*\?ъ옄移쒓뎄:\s*/i, /^\s*assistant:\s*/i, /^\s*AI:\s*/i];
+const leadingLabelPatterns = [/^\s*여자친구:\s*/i, /^\s*assistant:\s*/i, /^\s*AI:\s*/i];
 
 export function trimToMaxOutputChars(content: string): string {
   return content.length > env.LLM_MAX_OUTPUT_CHARS
