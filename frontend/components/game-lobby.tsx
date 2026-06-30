@@ -142,7 +142,7 @@ function PlayerStatusBar() {
   return (
     <div className="flex items-center gap-2 rounded-2xl border border-primary/20 bg-card/80 p-2.5 shadow-lg backdrop-blur-md">
       <div className="relative size-9 overflow-hidden rounded-full ring-2 ring-primary/30">
-        <Image src="/characters/minji.png" alt="플레이어" fill sizes="36px" className="object-cover" />
+        <Image src="/placeholder-user.jpg" alt="플레이어" fill sizes="36px" className="object-cover" />
       </div>
       <div className="flex flex-1 flex-col gap-1">
         <div className="flex items-center gap-1.5 text-xs font-bold text-foreground">
